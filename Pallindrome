@@ -1,0 +1,33 @@
+# Define a procedure is_palindrome, that takes as input a string, and returns a
+# Boolean indicating if the input string is a palindrome.
+
+# Base Case: '' => True
+# Recursive Case: if first and last characters don't match => False
+# if they do match, is the middle a palindrome?
+
+def is_palindrome(s):
+    a = 0
+    word = " "
+    drow = " "
+    if s == "":
+        return True
+    else: 
+        for m in s:
+            a = a -1
+            drow += s[a]
+            word += m
+        if word == drow: 
+            return True
+        return False
+                
+                
+
+ 
+ 
+print is_palindrome('andrea')
+ 
+print is_palindrome('')
+#>>> True
+print is_palindrome('abab')
+#>>> False
+print is_palindrome('abba')
